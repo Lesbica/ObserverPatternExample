@@ -23,7 +23,6 @@ namespace ObserverPatternExample.Observer
 
         public void Update(TimeOfDay time)
         {
-            // Change the environment based on the time of day
             switch (time)
             {
                 case TimeOfDay.Morning:

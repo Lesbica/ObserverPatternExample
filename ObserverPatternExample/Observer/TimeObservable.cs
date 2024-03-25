@@ -27,6 +27,8 @@ namespace ObserverPatternExample.Observer
             {
                 observer.Update(currentTime);
             }
+
+            MessageBox.Show("Time now: " + currentTime.ToString());
         }
 
         public void SetTime(TimeOfDay time)
