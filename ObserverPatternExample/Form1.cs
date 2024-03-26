@@ -16,7 +16,13 @@ namespace ObserverPatternExample
         {
             // Create environment observer and register it with the time observable
             EnvironmentObserver environmentObserver = new EnvironmentObserver(pictureBox1, pictureboxdird, pictureboxhouse, pictureboxtree);
+            NightObs nightObs = new NightObs(pictureBox1, pictureboxdird, pictureboxhouse, pictureboxtree);
+            EveningObs eveningObs = new EveningObs(pictureBox1, pictureboxdird, pictureboxhouse, pictureboxtree);
+            AfternoonObs afternoonObs = new AfternoonObs(pictureBox1, pictureboxdird, pictureboxhouse, pictureboxtree);
             timeObservable.RegisterObserver(environmentObserver);
+            timeObservable.RegisterObserver(nightObs);
+            timeObservable.RegisterObserver(eveningObs);
+            timeObservable.RegisterObserver(afternoonObs);
         }
 
         private void morningButton_Click(object sender, EventArgs e)
